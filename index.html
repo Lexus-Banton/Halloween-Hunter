@@ -15,6 +15,9 @@
 
         <!-- fonts -->
         <!-- see https://fonts.google.com/ -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dangrek&display=swap');
+        </style>
 
         <!-- css -->
         <link rel="stylesheet" href="styles/reset.css" />
@@ -31,6 +34,21 @@
         <main>
             <section class="banner" id="score">You have not hunted any monsters.</section>
             <section class="banner" id="outcome">Let's get Hunting!</section>
+
+            <section class="witch" id="witch">
+                <p id="witch hp" class="stat">20 HP</p>
+                <img id="witch image" class="girl" src="assets/witch.png" />
+            </section>
+            <section class="monster-section" id="monster-section"></section>
+            <form id="add-monster">
+                <label>
+                    <div>New Monster</div>
+                    <div class="controls">
+                        <input name="name" required />
+                        <button class="button">Add Monster</button>
+                    </div>
+                </label>
+            </form>
         </main>
     </body>
 </html>
