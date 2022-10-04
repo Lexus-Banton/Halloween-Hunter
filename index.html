@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Halloween Hunter</title>
+        <link rel="icon" type="image/x-icon" href="assets/cauldron.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dangrek&display=swap');
+        </style>
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/cauldron.png" alt="logo" />
+            <h1>Halloween Hunter</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="banner" id="score">You have not hunted any monsters.</section>
+            <section class="banner" id="outcome">Let's get Hunting!</section>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+            <section class="witch" id="witch">
+                <p id="witch-hp" class="stat">20 HP</p>
+                <img id="witch-image" class="girl" />
+            </section>
+            <div id="dead-monsters"></div>
+            <div id="damage-done"></div>
 
-    <main>
-
-    </main>
-
-</body>
-
+            <section class="monster-section" id="monster-section"></section>
+            <form id="add-monster">
+                <label>
+                    <div>New Monster</div>
+                    <div class="controls">
+                        <input name="name" required />
+                        <button class="button">Add Monster</button>
+                        <button class="button">Off to the Graveyard!</button>
+                    </div>
+                </label>
+            </form>
+        </main>
+    </body>
 </html>
