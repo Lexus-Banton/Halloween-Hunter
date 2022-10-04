@@ -101,6 +101,8 @@ function displayMonsters() {
             console.log('click', witch.hp, monster.hp);
 
             damageDone.textContent = `You hit ${monster.name} and dealt ${witchAttack} damage`;
+            displayWitch();
+            displayMonsters();
         });
     }
 }
